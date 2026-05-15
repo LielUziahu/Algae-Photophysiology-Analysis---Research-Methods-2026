@@ -74,7 +74,7 @@ The Paired T-test analysis revealed **no significant differences** between Dark 
 ---
 
 ## Repository Structure
-* `/Raw_Data`: Raw and processed CSV/Excel files.
+* `/Raw_Data`: Raw CSV files.
 * `/scripts`: Final R script for analysis and visualization.
-* `/Output`: High-resolution graphs, statistical results, and R Environment.
+* `/Output`: Processed CSV/Excel files, High-resolution graphs, statistical results, and R Environment.
 
