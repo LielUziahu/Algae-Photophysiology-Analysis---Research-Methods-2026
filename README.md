@@ -21,8 +21,28 @@ The following parameters were extracted and analyzed. A detailed Excel version o
 
 ## 2. Materials and Methods
 
-### Data Processing
-Raw data from `dark.csv` and `light.csv` were tidied into a long-format master dataset using R. Column headers were standardized to resolve character encoding issues (e.g., converting `Y.II` back to `Y(II)`). Missing values were filtered to ensure analysis integrity.
+### Field Sampling and Site Description
+Specimens were collected from the rocky intertidal zone of **Sdot-Yam, Israel**, along the eastern Mediterranean coast. To evaluate photo-adaptation strategies, algae were sampled from two distinct light micro-habitats:
+1. **Sun-exposed:** Individuals growing on open horizontal surfaces, subject to direct and high intensity solar radiation.
+2. **Shaded:** Individuals growing in deep crevices, under ledges, or in shaded vertical areas with no direct sunlight exposure.
+
+### Photophysiological Measurements
+Following collection, specimens were transported to the laboratory in ambient seawater and analyzed using an **Imaging PAM (iPAM, Walz, Germany)**. Rapid Light Curves (RLC) were generated for each individual. Each curve consisted of 17 incremental steps of Photosynthetically Active Radiation (PAR), ranging from 0 to approximately 700 µmol photons m⁻² s⁻¹. 
+The measured parameters included:
+* **Effective Quantum Yield (YII)**: The efficiency of energy conversion in Photosystem II.
+* **Electron Transport Rate (ETR)**: Derived as $Y(II) \times PAR \times 0.5 \times 0.84$.
+
+### Detailed Data Processing Workflow (R Script)
+The raw data exported from the iPAM software was processed using a custom-built R pipeline (R Version 4.x) to ensure reproducibility and statistical integrity. The workflow involved the following technical stages:
+
+1. **Automated Tidying:** Raw CSV files utilized a semicolon (;) delimiter. We used the `tidyr` package to transform the data from a **"Wide Format"** (where each sample occupied a separate column) into a **"Long Format" (Tidy Data)**. This was achieved using the `pivot_longer` function, allowing for unified operations across all species and treatments simultaneously.
+
+2. **Heuristic Naming Correction:** Due to character encoding issues during CSV export, R automatically converted parentheses in parameter names to dots (e.g., `Y(II)` became `Y.II.`). We implemented a **Regular Expression (Regex)** filter to dynamically identify these patterns and standardized them back to their biological nomenclature using `case_when` logic, ensuring consistent filtering and labeling in visualizations.
+
+3. **Algorithmic Parameter Extraction:**
+   * **Alpha ($\alpha$):** Rather than using a single point, the initial slope of the RLC was calculated by applying a **Linear Regression Model (`lm`)** to the ETR values at low light intensities ($0 < PAR \leq 250$). This provides a more robust estimate of light-harvesting efficiency.
+   * **$P_{max}$:** The photosynthetic capacity was programmatically identified as the absolute maximum ETR value achieved across the entire 17-point curve.
+   * **$I_k$ (Saturation Point):** Calculated as the mathematical ratio $P_{max} / \alpha$.
 
 ### Statistical Analysis
 Since each species was represented by a single individual ($N=1$), the species were treated as biological replicates to test the overall effect of light treatment. 
