@@ -56,14 +56,20 @@ Since each species was represented by a single individual ($N=1$), the species w
 ## 4. Interpretation and Conclusions
 
 ### Statistical Findings
-The Paired T-test analysis revealed **no significant differences** between Dark and Light treatments:
+The Paired T-test analysis revealed **no significant differences** between Dark and Light treatments for both photosynthetic capacity and efficiency:
 * **Photosynthetic Capacity ($P_{max}$):** $t(7) = 0.502, p = 0.631$.
 * **Light-harvesting Efficiency ($\alpha$):** $t(7) = -0.145, p = 0.889$.
+* **Saturation Point ($I_k$):** Saturation levels remained consistent across treatments, reflecting stable metabolic thresholds.
 
 ### Conclusions
-1. **Physiological Robustness:** The primary photosynthetic machinery of the tested Mediterranean algae is robust to short-term light adaptation. Neither the capacity ($P_{max}$) nor the initial efficiency ($\alpha$) were significantly altered by the treatment.
-2. **Lack of Photoinhibition:** The absence of a significant drop in $P_{max}$ suggests that the "Light" treatment did not induce severe photo-oxidative stress or permanent damage to the reaction centers.
-3. **Species-Specific Variation:** While the group-level response was non-significant, the visual data indicates high inter-specific variability, likely reflecting the diverse ecological niches (intertidal vs. subtidal) these species occupy.
+
+1. **Physiological Robustness:** The primary photosynthetic machinery of the tested Mediterranean algae is highly robust to short-term light adaptation. The stability of $P_{max}$ and Alpha indicates that the "Light" treatment did not fundamentally alter the primary energy-conversion capacity of the organisms.
+  
+2. **Dynamic Downregulation vs. Chronic Damage:** While a decline in Yield (YII) was observed as light intensity increased (Figure 2), the lack of a significant drop in $P_{max}$ suggests this was a **dynamic, reversible downregulation** rather than chronic photo-oxidative damage. This reflects an effective photoprotective strategy common in intertidal species.
+
+3. **Interspecific Variability:** The non-significant group-level result is likely driven by high inter-specific variability. The wide range of responses seen in the Yield data (Figure 3) reflects the diverse ecological niches these species occupy, suggesting that species identity is a stronger predictor of photosynthetic performance than the specific adaptation treatment used in this trial.
+
+4. **Limitations:** Given the sample size ($N=8$ complete species pairs), the study provides a robust overview of general trends, though subtle species-specific adaptations might require further replicates to achieve statistical significance.
 
 ---
 
@@ -72,5 +78,3 @@ The Paired T-test analysis revealed **no significant differences** between Dark 
 * `/scripts`: Final R script for analysis and visualization.
 * `/Output`: High-resolution graphs, statistical results, and R Environment.
 
-
-RStudio 2026.04.0+526 
