@@ -33,22 +33,22 @@ Since each species was represented by a single individual ($N=1$), the species w
 * **R Version:** 4.3.1
 * **RStudio Version** 2026.04.0+526 
 * **Key Packages:** `dplyr`, `tidyr`, `ggplot2`, `rstatix`, `broom`, `purrr`.
-* Full session information, including exact package versions, is documented in: [R_Session_Package_Versions.txt](./output/R_Session_Package_Versions.txt).
+* Full session information, including exact package versions, is documented in: [R_Session_Package_Versions.txt](./Output/R_Session_Package_Versions.txt).
 
 ---
 
 ## 3. Results
 
 ### Figure 1: Photosynthetic Capacity (ETR vs. PAR)
-![ETR Curves](./output/ETR_Curves_Per_Species.png)
+![ETR Curves](./Output/ETR_Curves_Per_Species.png)
 *Legend: Rapid Light Curves (RLC) showing the Electron Transport Rate (ETR) as a function of light intensity (PAR). Trends compare Dark-adapted (Red) vs. Light-adapted (Blue) states across 13 species. Most species exhibit standard saturation kinetics.*
 
 ### Figure 2: Photosynthetic Efficiency (Yield vs. PAR)
-![Yield Curves](./output/Yield_Curves_Per_Species.png)
+![Yield Curves](./Output/Yield_Curves_Per_Species.png)
 *Legend: Effective Quantum Yield (YII) as a function of PAR. This graph illustrates the progressive decline in efficiency as light intensity increases, indicating the dynamic downregulation of Photosystem II.*
 
 ### Figure 3: Yield Range Distribution
-![Yield Boxplot](./output/Yield_Range_Boxplot.png)
+![Yield Boxplot](./Output/Yield_Range_Boxplot.png)
 *Legend: Boxplots representing the distribution of Quantum Yield values across all PAR levels. This visualization highlights the inter-specific variability and the overall spread of physiological efficiency during the experiment.*
 
 ---
