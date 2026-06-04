@@ -532,3 +532,36 @@ if (exists("diff_by_taxon")) {
 }
 
 message("Success! All relevant publication-grade plots saved to your folder in 600 DPI.")
+
+# ==============================================================
+# EXPORT SOFTWARE AND PACKAGE VERSIONS FOR REPRODUCIBILITY
+# Add this block at the very end of your script
+# ==============================================================
+
+# 1. Capture and save the complete session environment details (R version, OS, loaded apps)
+sink("R_software_and_package_versions.txt")
+cat("==============================================================\n")
+cat("RESEARCH METHODS 2026 - PHOTOPHYSIOLOGY SYSTEM VERSIONS LOG\n")
+cat("Generated on:", as.character(Sys.time()), "\n")
+cat("==============================================================\n\n")
+print(sessionInfo())
+sink()
+
+# 2. Compile a clean, structured table for the core project packages
+core_project_packages <- c("dplyr", "tidyr", "purrr", "broom", "rstatix", 
+                           "ggplot2", "patchwork", "lubridate", "hms", "writexl")
+
+package_versions_table <- data.frame(
+  Package_Name = core_project_packages,
+  Version = sapply(core_project_packages, function(pkg) {
+    if (requireNamespace(pkg, quietly = TRUE)) as.character(packageVersion(pkg)) else "Not Loaded"
+  }),
+  stringsAsFactors = FALSE
+)
+
+# 3. Export the structured package list into a clean CSV file
+write.csv(package_versions_table, "Detailed_Package_Versions_List.csv", row.names = FALSE)
+
+# Print confirmation message to the R console
+message("Success! 'R_software_and_package_versions.txt' and 'Detailed_Package_Versions_List.csv' have been saved to your working directory.")
+# ==============================================================
