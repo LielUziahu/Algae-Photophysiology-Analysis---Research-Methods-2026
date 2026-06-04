@@ -94,10 +94,10 @@ The active light adaptation history dictates the immediate kinetic capacity of t
 To evaluate phenotypic plasticity across species, differences are plotted as absolute variation ($\Delta$) and proportional indices (Ratios):
 
 ![Absolute Variations](Output/Figure_3_Algae_Difference_Plot_600DPI.png)
-*Figure 3: Absolute delta shifts ($\text{Light Mean} - \text{Dark Mean}$) across curve-level traits for each isolated macroalgal taxon. Positive values indicate an upregulation during the light cycle.*
+*Figure 3: Absolute delta shifts (Light Mean - Dark Mean) across curve-level traits for each isolated macroalgal taxon. Positive values indicate an upregulation during the light cycle.*
 
 ![Proportional Ratios](Output/Figure_4_Algae_Ratio_Plot_600DPI.png)
-*Figure 4: Proportional ratio index ($\text{Light} / \text{Dark}$). The red horizontal dashed line represents the homeostasis threshold ($Ratio = 1.0$). Bars extending above the line indicate positive light acclimation.*
+*Figure 4: Proportional ratio index (Light / Dark). The red horizontal dashed line represents the homeostasis threshold ($Ratio = 1.0$). Bars extending above the line indicate positive light acclimation.*
 
 ![Unified Patchwork Panel](Output/Figure_5_Algae_Combined_Panel_600DPI.png)
 *Figure 5: Publication-grade side-by-side composite panel mapping absolute delta shifts (left) and proportional ratios (right) across all photophysiological parameters and algal phyla, compiled via the `patchwork` engine at 600 DPI.*
