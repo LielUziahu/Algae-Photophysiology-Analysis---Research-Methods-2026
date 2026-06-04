@@ -26,6 +26,17 @@ Per experimental data logs, **Light Sample 9** was systematically purged from th
 ---
 
 ## 3. Materials and Methods
+### Sample Collection & Study Site
+
+Wild macroalgal specimens were collected on **April 16, 2026**, at approximately **13:00 (1:00 PM)** from the shallow rocky reefs of **Sdot Yam, Israel**. To evaluate the role of immediate light history and microhabitat zonation on macroalgal photophysiology, sampling was explicitly stratified across two distinct microenvironments: open, sun-exposed surfaces and darker, shaded microhabitats located beneath rocky shelters and ledges.
+
+To compile a comprehensive profile of the localized macroalgal community, sampling targeted 12 native species representing three major evolutionary lineages:
+
+* **Chlorophyta (Green Algae):** *Ulva lactuca*, *Codium elatum*.
+* **Ochrophyta (Brown Algae):** *Sargassum vulgare*, *Padina pavonica*, *Dictyota dichotoma*, *Colpomenia sinuosa*, *Halopteris scoparia*.
+* **Rhodophyta (Red Algae):** *Jania rubens*, *Galaxaura rugosa*, *Hypnea musciformis*, *Nemalion helminthoides*, and an unidentified red turf macroalga ("Unknown Red Algae").
+
+Healthy, visually intact thalli were carefully detached from the rocky limestone substratum during low tide or via shallow diving. Specimens were immediately placed into insulated containers filled with ambient site seawater to minimize thermal and desiccation stress during transit. Upon arrival at the laboratory, the macroalgae were transferred to holding tanks equipped with a continuous flow-through system circulating filtered seawater under stable environmental parameters (**~20°C**, matching native Levantine surface temperatures) to allow physiological stabilization prior to Pulse-Amplitude-Modulation (PAM) fluorometry profiling.
 
 ### Computational Architecture
 Data restructuring, feature extraction, non-linear parameter estimation, parametric/non-parametric testing, and high-resolution visualization rendering were executed using **RStudio** (v2026.05.0 Build 218) within the **R Statistical Computing Environment** (v4.4.3).
