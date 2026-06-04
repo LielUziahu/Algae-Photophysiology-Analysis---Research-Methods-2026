@@ -138,7 +138,7 @@ Even when removing this highly adapted species from the dataset, the statistical
 ---
 ---
 
- 1. Proposed Future Experiment: 1-Day Metabolic Coupling Assay
+# 1. Proposed Future Experiment: 1-Day Metabolic Coupling Assay
 
 ### Project Title
 **Coupling Chlorophyll Fluorescence Kinetics with Closed-Chamber Oxygen Flux Probes to Determine Light-History Driven Carbon Fixation Efficiency in Mediterranean Macroalgae**
