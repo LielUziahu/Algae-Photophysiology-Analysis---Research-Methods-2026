@@ -28,15 +28,15 @@ Per experimental data logs, **Light Sample 9** was systematically purged from th
 ## 3. Materials and Methods
 
 ### Computational Architecture
-Data restructuring, feature extraction, non-linear parameter estimation, parametric/non-parametric testing, and high-resolution visualization rendering were executed using **RStudio** within the **R Statistical Computing Environment**.
+Data restructuring, feature extraction, non-linear parameter estimation, parametric/non-parametric testing, and high-resolution visualization rendering were executed using **RStudio** (v2026.05.0 Build 218) within the **R Statistical Computing Environment** (v4.4.3).
 
 ### Open-Science Reproducibility Stack
 The exact version control state of the compiled packages utilized in this runtime environment includes:
-* **`dplyr`** (v1.1.4) & **`tidyr`** (v1.3.1) – For algorithmic filtering, long-format reshaping (`pivot_longer`), and delta/ratio transformations.
-* **`lubridate`** (v1.9.3) & **`hms`** (v1.1.3) – For parsing operational chronological timestamps.
-* **`purrr`** (v1.0.2) & **`broom`** (v1.0.5) – For nesting datasets by taxon and mapping parallel statistical models.
-* **`patchwork`** (v1.2.0) – For assembling multi-axis side-by-side comparison panels.
-* **`ggplot2`** (v3.5.0) – For rendering high-fidelity image outputs.
+* **`dplyr`** (v1.2.1) & **`tidyr`** (v1.3.2) – For algorithmic filtering, long-format reshaping (`pivot_longer`), and delta/ratio transformations.
+* **`lubridate`** (v1.9.5) & **`hms`** (v1.1.4) – For parsing operational chronological timestamps.
+* **`purrr`** (v1.2.2) & **`broom`** (v1.0.13) – For nesting datasets by taxon and mapping parallel statistical models.
+* **`patchwork`** (v1.3.2) – For assembling multi-axis side-by-side comparison panels.
+* **`ggplot2`** (v4.0.3) – For rendering high-fidelity image outputs.
 
 ### Curve-Level Statistical Rationale
 Repeated PAR steps on the same algal thallus generate a high degree of mathematical autocorrelation. Treating each light step as an independent observation constitutes **Pseudoreplication**. 
@@ -73,29 +73,29 @@ Table 2: Sensitivity Analysis - Paired Wilcoxon Signed-Rank Test Excluding the T
 #### A. Photosynthesis-Irradiance (P-I) Kinetics
 The active light adaptation history dictates the immediate kinetic capacity of the macroalgal specimens. The fitted response models are exported below:
 
-![Light Adapted P-I Curves](Figure_1_PI_Curves_Light_Adapted_600DPI.png)
+![Light Adapted P-I Curves](Output/Figure_1_PI_Curves_Light_Adapted_600DPI.png)
 *Figure 1: Non-linear regression modeling of relative Electron Transport Rates (rETR) against incident light (PAR) for Light-adapted macroalgal species from the Israeli coast. Individual lines represent independent biological replicates grouped by taxonomic identity.*
 
-![Dark Adapted P-I Curves](Figure_2_PI_Curves_Dark_Adapted_600DPI.png)
+![Dark Adapted P-I Curves](Output/Figure_2_PI_Curves_Dark_Adapted_600DPI.png)
 *Figure 2: Non-linear regression modeling of relative Electron Transport Rates (rETR) against incident light (PAR) for Dark-adapted macroalgal species. Note the lower operational saturation thresholds compared to light-treated setups.*
 
 #### B. Quantifying State Modifications (Delta & Proportional Ratios)
 To evaluate phenotypic plasticity across species, differences are plotted as absolute variation ($\Delta$) and proportional indices (Ratios):
 
-![Absolute Variations](Figure_3_Algae_Difference_Plot_600DPI.png)
+![Absolute Variations](Output/Figure_3_Algae_Difference_Plot_600DPI.png)
 *Figure 3: Absolute delta shifts ($\text{Light Mean} - \text{Dark Mean}$) across curve-level traits for each isolated macroalgal taxon. Positive values indicate an upregulation during the light cycle.*
 
-![Proportional Ratios](Figure_4_Algae_Ratio_Plot_600DPI.png)
+![Proportional Ratios](Output/Figure_4_Algae_Ratio_Plot_600DPI.png)
 *Figure 4: Proportional ratio index ($\text{Light} / \text{Dark}$). The red horizontal dashed line represents the homeostasis threshold ($Ratio = 1.0$). Bars extending above the line indicate positive light acclimation.*
 
-![Unified Patchwork Panel](Figure_5_Algae_Combined_Panel_600DPI.png)
+![Unified Patchwork Panel](Output/Figure_5_Algae_Combined_Panel_600DPI.png)
 *Figure 5: Publication-grade side-by-side composite panel mapping absolute delta shifts (left) and proportional ratios (right) across all photophysiological parameters and algal phyla, compiled via the `patchwork` engine at 600 DPI.*
 
 #### C. Statistical Quality Control
 
 Figure 6: Quantile-Quantile (Q-Q) Normality Assessment of Transformation Residuals
 
-![Normality Q-Q Plot](Figure_6_Normality_QQ_Plot_600DPI.png)
+![Normality Q-Q Plot](Output/Figure_6_Normality_QQ_Plot_600DPI.png)
 *Figure 6: Normal Quantile-Quantile (Q-Q) plot displaying the distribution of calculated differences against theoretical normal distribution quantiles, faceted by physiological parameter. Deviations from the straight line at the tails validate the selection of the non-parametric Wilcoxon Signed-Rank test over standard paired parametric T-tests.*
 
 ---
@@ -104,21 +104,21 @@ Figure 6: Quantile-Quantile (Q-Q) Normality Assessment of Transformation Residua
 
 The data extracted through this automated workflow reveals prominent biological signatures that reflect the evolutionary adaptations of macroalgae to the vertical zonation and environmental constraints of the Israeli coast.
 
-### 1. Upregulation of Maximum Photosynthetic Capacity ($P_{max}$)
+### 5.1 Upregulation of Maximum Photosynthetic Capacity ($P_{max}$)
 The community-wide paired Wilcoxon test demonstrated a highly significant induction of maximum photosynthetic capacity ($P_{max}$) in light-adapted states compared to dark-adapted controls ($p = 0.0039$, Table 1). 
 
 Biologically, this reflects a rapid operational mobilization of the electron transport chain. Canopy-forming brown macroalgae common on Israeli reefs, such as *Sargassum vulgare* and *Cystoseira* spp., show the largest absolute delta increases in $P_{max}$ (Figure 3). These species inhabit the upper sublittoral zone, where they experience constant wave movement and frequent shifts in light intensity (sunflecks). 
 
 Maintaining high metabolic flexibility allows them to rapidly optimize carbon fixation during periods of peak illumination while keeping their electron pathways open to prevent the accumulation of damaging reactive oxygen species (ROS).
 
-### 2. Efficiency Reduction ($\alpha$) and Photoprotective Trade-offs
+### 5.2 Efficiency Reduction ($\alpha$) and Photoprotective Trade-offs
 In contrast to $P_{max}$, the initial slope efficiency ($\alpha$) exhibited a significant decrease following light adaptation ($p = 0.0122$, Table 1). This reduction represents a deliberate photoprotective trade-off known as **Dynamic Photoinhibition**. 
 
 When intertidal nitrophilic greens like *Ulva lactuca* are exposed to intense ambient light, they experience light saturation almost immediately. To protect their photosystems, they downregulate light-harvesting efficiency by activating Non-Photochemical Quenching (NPQ) via the Xanthophyll cycle. This process safely dissipates excess photon energy as heat. 
 
 The drop in $\alpha$ seen in Figure 3 validates this mechanism, showing that the algae decrease their light-trapping efficiency in high-light environments to protect their cellular structure from irreversible damage.
 
-### 3. Sensitivity Assessment and Taxon Resilience
+### 5.3 Sensitivity Assessment and Taxon Resilience
 The sensitivity analysis (Table 2), which excluded the brown alga *Colpomenia sinuosa*, confirmed that the observed physiological shifts are robust community-wide trends rather than artifacts driven by a single highly responsive species. *Colpomenia sinuosa* forms hollow, globose thalli that often trap gas bubbles, allowing it to float high in intertidal rock pools along the Israeli coast. 
 
 Even when removing this highly adapted species from the dataset, the statistical significance of both the $P_{max}$ upregulation and the $\alpha$ efficiency downregulation was maintained ($p < 0.05$). This demonstrates that rapid photophysiological adjustment is a widespread structural strategy shared across Mediterranean macroalgae phyla, enabling them to survive the sharp, short-term light transitions characteristic of the Levantine coastal ecosystem.
