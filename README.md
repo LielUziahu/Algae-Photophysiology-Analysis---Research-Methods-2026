@@ -28,15 +28,15 @@ Per experimental data logs, **Light Sample 9** was systematically purged from th
 ## 3. Materials and Methods
 
 ### Computational Architecture
-Data restructuring, feature extraction, non-linear parameter estimation, parametric/non-parametric testing, and high-resolution visualization rendering were executed using **RStudio** within the **R Statistical Computing Environment**.
+Data restructuring, feature extraction, non-linear parameter estimation, parametric/non-parametric testing, and high-resolution visualization rendering were executed using **RStudio** (v2026.05.0 Build 218) within the **R Statistical Computing Environment** (v4.4.3).
 
 ### Open-Science Reproducibility Stack
 The exact version control state of the compiled packages utilized in this runtime environment includes:
-* **`dplyr`** (v1.1.4) & **`tidyr`** (v1.3.1) – For algorithmic filtering, long-format reshaping (`pivot_longer`), and delta/ratio transformations.
-* **`lubridate`** (v1.9.3) & **`hms`** (v1.1.3) – For parsing operational chronological timestamps.
-* **`purrr`** (v1.0.2) & **`broom`** (v1.0.5) – For nesting datasets by taxon and mapping parallel statistical models.
-* **`patchwork`** (v1.2.0) – For assembling multi-axis side-by-side comparison panels.
-* **`ggplot2`** (v3.5.0) – For rendering high-fidelity image outputs.
+* **`dplyr`** (v1.2.1) & **`tidyr`** (v1.3.2) – For algorithmic filtering, long-format reshaping (`pivot_longer`), and delta/ratio transformations.
+* **`lubridate`** (v1.9.5) & **`hms`** (v1.1.4) – For parsing operational chronological timestamps.
+* **`purrr`** (v1.2.2) & **`broom`** (v1.0.13) – For nesting datasets by taxon and mapping parallel statistical models.
+* **`patchwork`** (v1.3.2) – For assembling multi-axis side-by-side comparison panels.
+* **`ggplot2`** (v4.0.3) – For rendering high-fidelity image outputs.
 
 ### Curve-Level Statistical Rationale
 Repeated PAR steps on the same algal thallus generate a high degree of mathematical autocorrelation. Treating each light step as an independent observation constitutes **Pseudoreplication**. 
