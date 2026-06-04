@@ -73,29 +73,29 @@ Table 2: Sensitivity Analysis - Paired Wilcoxon Signed-Rank Test Excluding the T
 #### A. Photosynthesis-Irradiance (P-I) Kinetics
 The active light adaptation history dictates the immediate kinetic capacity of the macroalgal specimens. The fitted response models are exported below:
 
-![Light Adapted P-I Curves](Figure_1_PI_Curves_Light_Adapted_600DPI.png)
+![Light Adapted P-I Curves](output/Figure_1_PI_Curves_Light_Adapted_600DPI.png)
 *Figure 1: Non-linear regression modeling of relative Electron Transport Rates (rETR) against incident light (PAR) for Light-adapted macroalgal species from the Israeli coast. Individual lines represent independent biological replicates grouped by taxonomic identity.*
 
-![Dark Adapted P-I Curves](Figure_2_PI_Curves_Dark_Adapted_600DPI.png)
+![Dark Adapted P-I Curves](output/Figure_2_PI_Curves_Dark_Adapted_600DPI.png)
 *Figure 2: Non-linear regression modeling of relative Electron Transport Rates (rETR) against incident light (PAR) for Dark-adapted macroalgal species. Note the lower operational saturation thresholds compared to light-treated setups.*
 
 #### B. Quantifying State Modifications (Delta & Proportional Ratios)
 To evaluate phenotypic plasticity across species, differences are plotted as absolute variation ($\Delta$) and proportional indices (Ratios):
 
-![Absolute Variations](Figure_3_Algae_Difference_Plot_600DPI.png)
+![Absolute Variations](output/Figure_3_Algae_Difference_Plot_600DPI.png)
 *Figure 3: Absolute delta shifts ($\text{Light Mean} - \text{Dark Mean}$) across curve-level traits for each isolated macroalgal taxon. Positive values indicate an upregulation during the light cycle.*
 
-![Proportional Ratios](Figure_4_Algae_Ratio_Plot_600DPI.png)
+![Proportional Ratios](output/Figure_4_Algae_Ratio_Plot_600DPI.png)
 *Figure 4: Proportional ratio index ($\text{Light} / \text{Dark}$). The red horizontal dashed line represents the homeostasis threshold ($Ratio = 1.0$). Bars extending above the line indicate positive light acclimation.*
 
-![Unified Patchwork Panel](Figure_5_Algae_Combined_Panel_600DPI.png)
+![Unified Patchwork Panel](output/Figure_5_Algae_Combined_Panel_600DPI.png)
 *Figure 5: Publication-grade side-by-side composite panel mapping absolute delta shifts (left) and proportional ratios (right) across all photophysiological parameters and algal phyla, compiled via the `patchwork` engine at 600 DPI.*
 
 #### C. Statistical Quality Control
 
 Figure 6: Quantile-Quantile (Q-Q) Normality Assessment of Transformation Residuals
 
-![Normality Q-Q Plot](Figure_6_Normality_QQ_Plot_600DPI.png)
+![Normality Q-Q Plot](output/Figure_6_Normality_QQ_Plot_600DPI.png)
 *Figure 6: Normal Quantile-Quantile (Q-Q) plot displaying the distribution of calculated differences against theoretical normal distribution quantiles, faceted by physiological parameter. Deviations from the straight line at the tails validate the selection of the non-parametric Wilcoxon Signed-Rank test over standard paired parametric T-tests.*
 
 ---
