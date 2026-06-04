@@ -104,21 +104,21 @@ Figure 6: Quantile-Quantile (Q-Q) Normality Assessment of Transformation Residua
 
 The data extracted through this automated workflow reveals prominent biological signatures that reflect the evolutionary adaptations of macroalgae to the vertical zonation and environmental constraints of the Israeli coast.
 
-### 1. Upregulation of Maximum Photosynthetic Capacity ($P_{max}$)
+### 5.1 Upregulation of Maximum Photosynthetic Capacity ($P_{max}$)
 The community-wide paired Wilcoxon test demonstrated a highly significant induction of maximum photosynthetic capacity ($P_{max}$) in light-adapted states compared to dark-adapted controls ($p = 0.0039$, Table 1). 
 
 Biologically, this reflects a rapid operational mobilization of the electron transport chain. Canopy-forming brown macroalgae common on Israeli reefs, such as *Sargassum vulgare* and *Cystoseira* spp., show the largest absolute delta increases in $P_{max}$ (Figure 3). These species inhabit the upper sublittoral zone, where they experience constant wave movement and frequent shifts in light intensity (sunflecks). 
 
 Maintaining high metabolic flexibility allows them to rapidly optimize carbon fixation during periods of peak illumination while keeping their electron pathways open to prevent the accumulation of damaging reactive oxygen species (ROS).
 
-### 2. Efficiency Reduction ($\alpha$) and Photoprotective Trade-offs
+### 5.2 Efficiency Reduction ($\alpha$) and Photoprotective Trade-offs
 In contrast to $P_{max}$, the initial slope efficiency ($\alpha$) exhibited a significant decrease following light adaptation ($p = 0.0122$, Table 1). This reduction represents a deliberate photoprotective trade-off known as **Dynamic Photoinhibition**. 
 
 When intertidal nitrophilic greens like *Ulva lactuca* are exposed to intense ambient light, they experience light saturation almost immediately. To protect their photosystems, they downregulate light-harvesting efficiency by activating Non-Photochemical Quenching (NPQ) via the Xanthophyll cycle. This process safely dissipates excess photon energy as heat. 
 
 The drop in $\alpha$ seen in Figure 3 validates this mechanism, showing that the algae decrease their light-trapping efficiency in high-light environments to protect their cellular structure from irreversible damage.
 
-### 3. Sensitivity Assessment and Taxon Resilience
+### 5.3 Sensitivity Assessment and Taxon Resilience
 The sensitivity analysis (Table 2), which excluded the brown alga *Colpomenia sinuosa*, confirmed that the observed physiological shifts are robust community-wide trends rather than artifacts driven by a single highly responsive species. *Colpomenia sinuosa* forms hollow, globose thalli that often trap gas bubbles, allowing it to float high in intertidal rock pools along the Israeli coast. 
 
 Even when removing this highly adapted species from the dataset, the statistical significance of both the $P_{max}$ upregulation and the $\alpha$ efficiency downregulation was maintained ($p < 0.05$). This demonstrates that rapid photophysiological adjustment is a widespread structural strategy shared across Mediterranean macroalgae phyla, enabling them to survive the sharp, short-term light transitions characteristic of the Levantine coastal ecosystem.
