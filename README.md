@@ -136,5 +136,66 @@ Even when removing this highly adapted species from the dataset, the statistical
 
 ---
 
-**Data Integrity Certification:** Tidyverse Verified Open-Science Protocol  
-**Database Operational Year:** 2026
+ # 1. Proposed Future Experiment: 1-Day Metabolic Coupling Assay
+
+### Project Title
+**Coupling Chlorophyll Fluorescence Kinetics with Closed-Chamber Oxygen Flux Probes to Determine Light-History Driven Carbon Fixation Efficiency in Mediterranean Macroalgae**
+
+### Objective
+To move beyond arbitrary relative electron transport rates ($rETR$) and directly quantify the absolute metabolic gas exchange (Oxygen evolution vs. Respiration) of green, brown, and red macroalgae as a function of their microhabitat light history.
+
+---
+
+### Experimental Design Matrix
+The experiment uses a balanced factorial design completed entirely within a single **14-hour workflow**, utilizing **$n = 5$ true biological replicates** per treatment group ($3\ \text{species} \times 2\ \text{microhabitats} \times 5\ \text{replicates} = 30\ \text{total sample units}$).
+
+* **Selected Target Species:**
+  1. **Green (Chlorophyta):** *Ulva lactuca* (Opportunistic sheets)
+  2. **Brown (Ochrophyta):** *Sargassum vulgare* (Canopy builder)
+  3. **Red (Rhodophyta):** *Galaxaura rugosa* (Sublittoral turf)
+* **Field Microenvironments:** High-Light Area (Open reef flat surface) vs. Dark Area (Under rocky crevices/shelters).
+
+---
+
+### Methodological Timeline (1-Day Execution)
+
+#### Phase 1: Rapid Field Collection & Microhabitat Recording (08:00 – 10:30)
+1. Biological replicates ($n=5$ per group) are harvested simultaneously from open sun-exposed flat zones and deep rocky overhangs at Sdot Yam reef.
+2. In-situ PAR is recorded at the exact collection point using a quantum sensor. 
+3. Thalli are stored in individual light-shielded zip bags filled with ambient seawater and placed inside cold insulation coolers to halt immediate dark/light state transitions during the 30-minute transit to the lab.
+
+#### Phase 2: Structural Standardization & Volume Measurement (10:30 – 11:30)
+1. To accurately calculate final oxygen gas exchange concentrations, chamber volumes must be normalized against tissue displacements.
+2. Each replicate thallus is carefully blotted dry with lint-free paper to remove surface capillary water.
+3. **Thallus Volume ($V_{algae}$, in $\text{cm}^3$)** is recorded via water displacement inside a high-precision volumetric graduated cylinder before any physiological testing begins.
+
+#### Phase 3: Fast-Through PAM Fluorometry Runs (11:30 – 14:00)
+1. Samples are kept in dark-acclimation water paths for 20 minutes.
+2. Baseline maximum quantum yield ($F_v/F_m$) and effective connectivity parameters ($\sigma$) are taken using the established PAM script parameters at the baseline level ($\text{PAR} = 0$).
+
+#### Phase 4: FireSting (FIRE) Oxygen Optode Incubations (14:00 – 17:30)
+1. Thalli are sealed into custom-built glass respirometry chambers filled with air-saturated filtered seawater, equipped with localized magnetic stirring bars to prevent boundary-layer oxygen stagnation.
+2. **Phase A: Dark Incubation (30 minutes):** Chambers are wrapped in complete black foil. The FireSting needle optodes log the drop in dissolved oxygen concentration to measure **Dark Respiration rate ($R_D$)**.
+3. **Phase B: Light Incubation (30 minutes):** Foil is removed, and chambers are exposed to a fixed high-output LED light matrix ($400\ \mu mol\ photons\ m^{-2}\ s^{-1}$). Optodes track the linear increase in oxygen evolution to measure **Net Photosynthetic Capacity ($P_N$)**.
+
+---
+
+### Data Analysis Pipeline
+
+Dissolved oxygen curves recorded over the 30-minute phases are filtered for early equilibration noise, and the linear slope ($\Delta O_2 / \Delta t$) is calculated. Metabolic fluxes are normalized using the previously recorded thallus volume metric:
+
+$$P_{\text{flux}} = \frac{(\Delta O_2 \times (V_{\text{chamber}} - V_{\text{algae}}))}{\Delta t \times V_{\text{algae}}}$$
+
+*Units expressed in: $\mu mol\ O_2\ \text{cm}^{-3}\ \text{hour}^{-1}$*
+
+Gross Photosynthetic Capacity ($P_G$) is derived mathematically via: $P_G = P_N + |R_D|$.
+
+
+
+### Expected Outcomes & Biological Value
+By pairing these two systems on the same day, you can calculate the **Electron Requirement for Oxygen Evolution (E/O ratio)**:
+
+$$\text{E/O Ratio} = \frac{rETR\ \text{(from PAM)}}{P_G\ \text{(from FireSting)}}$$
+
+* **Biological Insight:** Algae from dark, shaded rocky shelters are expected to show tight, highly efficient coupling (Low E/O ratio), meaning every captured photon is transferred directly to oxygen generation. 
+* Conversely, species adapted to high-light areas (*Ulva*) will likely display high E/O ratios under sudden light shifts, revealing that a large portion of their electron transport flow is safely dumped through alternative cyclic pathways to dissipate stress. This provides a direct, measurable assessment of microhabitat adaptation.
