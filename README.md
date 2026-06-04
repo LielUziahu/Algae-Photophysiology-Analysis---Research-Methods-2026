@@ -135,8 +135,10 @@ The sensitivity analysis (Table 2), which excluded the brown alga *Colpomenia si
 Even when removing this highly adapted species from the dataset, the statistical significance of both the $P_{max}$ upregulation and the $\alpha$ efficiency downregulation was maintained ($p < 0.05$). This demonstrates that rapid photophysiological adjustment is a widespread structural strategy shared across Mediterranean macroalgae phyla, enabling them to survive the sharp, short-term light transitions characteristic of the Levantine coastal ecosystem.
 
 ---
+---
+---
 
- # 1. Proposed Future Experiment: 1-Day Metabolic Coupling Assay
+ 1. Proposed Future Experiment: 1-Day Metabolic Coupling Assay
 
 ### Project Title
 **Coupling Chlorophyll Fluorescence Kinetics with Closed-Chamber Oxygen Flux Probes to Determine Light-History Driven Carbon Fixation Efficiency in Mediterranean Macroalgae**
@@ -186,7 +188,7 @@ Dissolved oxygen curves recorded over the 30-minute phases are filtered for earl
 
 $$P_{\text{flux}} = \frac{(\Delta O_2 \times (V_{\text{chamber}} - V_{\text{algae}}))}{\Delta t \times V_{\text{algae}}}$$
 
-*Units expressed in: $\mu mol\ O_2\ \text{cm}^{-3}\ \text{hour}^{-1}$*
+*Units expressed in: umol\ O_2\ cm^-3\ hour^-1*
 
 Gross Photosynthetic Capacity ($P_G$) is derived mathematically via: $P_G = P_N + |R_D|$.
 
