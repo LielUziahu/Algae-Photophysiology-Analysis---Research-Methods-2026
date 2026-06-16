@@ -226,9 +226,9 @@ dark_ETR_long %>%
 
 unique(dark_ETR_long$Sample_ID)
 
-# now we will fit curves to the actual data
-#Start by estimating the curve parameters by non-linear least squares method
-# from the fitted curve we get the parameters of aquatic photosynthesis we wanted (following the word of the great Falkowski):
+# fit curves to the actual data
+# Estimating the curve parameters by non-linear least squares method
+# from the fitted curve we get the parameters of aquatic photosynthesis we wanted:
 # Am = asymptotic maximum = Pmax= max photosynthesis
 # AQY = initial sloap = alpha = Fv/Fm
 # Rd =  the y intercept of the curve = dark respiration
@@ -236,7 +236,7 @@ unique(dark_ETR_long$Sample_ID)
 
 
 # we will first calculate these parameters for the entire dataset.
-set.seed(123) #Random Number Generation important whan the process/calculation is iterative. if you change it, you may get different results....
+set.seed(123) #Random Number Generation important whan the process/calculation is iterative.
 
 dark_ETR_pi <- dark_ETR_long %>% subset(PAR<600) 
 curve.nlsPIC <- dark_ETR_pi %>% nls(ETR ~ (Am*((AQY*PAR)/(sqrt(Am^2 + (AQY*PAR)^2)))-Rd), data=., start=list(Am=0.7,  AQY=0.001, Rd=.4))
@@ -302,7 +302,6 @@ PI.curves_light+PI.curves_dark
 
 ### fix limits to dark group data- to reduce miss-fit ?
 # needs to be at Taxon level.
-
 
 
 # Collect all the estimated parameters for all samples.
@@ -378,7 +377,7 @@ ggplot(nls_data_long_filtered, aes(x=Group, y=Value))+
   geom_point(aes(color=Taxon), size=2, position=position_jitter(width=0.2))+
   facet_wrap(~Photo_vars, scales = "free")
 
-# lets calculate the difference between light and dark for each species
+# calculate the difference between light and dark for each species
 
 library(dplyr)
 library(tidyr)
@@ -463,7 +462,6 @@ test_paired_no_Colpomenia
 
 # ==============================================================
 # FINAL IMAGE EXPORT STACK - ATTACH TO THE END OF YOUR SCRIPT
-# This block exports all 5 key figures for your report in 600 DPI
 # ==============================================================
 
 message("Starting high-resolution export (600 DPI)...")
@@ -531,14 +529,12 @@ if (exists("diff_by_taxon")) {
   )
 }
 
-message("Success! All relevant publication-grade plots saved to your folder in 600 DPI.")
+message("All relevant plots saved to your folder in 600 DPI.")
 
-# ==============================================================
-# EXPORT SOFTWARE AND PACKAGE VERSIONS FOR REPRODUCIBILITY
-# Add this block at the very end of your script
-# ==============================================================
 
-# 1. Capture and save the complete session environment details (R version, OS, loaded apps)
+# 7. EXPORT SOFTWARE AND PACKAGE VERSIONS FOR REPRODUCIBILITY
+
+# 7.1. Capture and save the complete session environment details (R version, OS, loaded apps)
 sink("R_software_and_package_versions.txt")
 cat("==============================================================\n")
 cat("RESEARCH METHODS 2026 - PHOTOPHYSIOLOGY SYSTEM VERSIONS LOG\n")
@@ -547,7 +543,7 @@ cat("==============================================================\n\n")
 print(sessionInfo())
 sink()
 
-# 2. Compile a clean, structured table for the core project packages
+# 7.2. Compile a clean, structured table for the core project packages
 core_project_packages <- c("dplyr", "tidyr", "purrr", "broom", "rstatix", 
                            "ggplot2", "patchwork", "lubridate", "hms", "writexl")
 
@@ -559,9 +555,9 @@ package_versions_table <- data.frame(
   stringsAsFactors = FALSE
 )
 
-# 3. Export the structured package list into a clean CSV file
+# 7.3. Export the structured package list into a clean CSV file
 write.csv(package_versions_table, "Detailed_Package_Versions_List.csv", row.names = FALSE)
 
-# Print confirmation message to the R console
+# 7.4 Print confirmation message to the R console
 message("Success! 'R_software_and_package_versions.txt' and 'Detailed_Package_Versions_List.csv' have been saved to your working directory.")
 # ==============================================================
